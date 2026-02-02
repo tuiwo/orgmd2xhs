@@ -1,0 +1,2 @@
+[console_scripts]
+org2xhs = org2xhs.cli:app

@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "org2xhs"
+version = "0.1.0"
+description = "Convert .org documents into elegant Xiaohongshu-style images (1242x1660)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name="Your Name"}]
+dependencies = [
+  "typer>=0.12",
+  "jinja2>=3.1",
+  "playwright>=1.43",
+  "pillow>=10.2",
+]
+
+[project.scripts]
+org2xhs = "org2xhs.cli:app"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"org2xhs" = ["templates/*.j2"]

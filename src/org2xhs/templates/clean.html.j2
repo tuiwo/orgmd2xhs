@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width={{ width }}, height={{ height }}, initial-scale=1" />
+  <title>{{ title }}</title>
+
+  <style>
+    :root {
+      --page-width: {{ width }}px;
+      --page-height: {{ height }}px;
+
+      --page-pad-left: 92px;
+      --page-pad-right: 92px;
+      --page-pad-top: 110px;
+      --page-pad-bottom: 120px;
+
+      --text: #111;
+      --muted: #666;
+      --bg: #fff;
+
+      --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+                   "SF Pro Display", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC",
+                   "Microsoft YaHei", Arial, sans-serif;
+      --font-serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, "Songti SC",
+                    "STSong", "Noto Serif CJK SC", serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+      --base: 34px;
+      --leading: 1.55;
+      --title: 54px;
+      --h2: 42px;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-serif);
+      font-size: var(--base);
+      line-height: var(--leading);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+
+    #content { width: var(--page-width); margin: 0; padding: 0; }
+    #pages { width: var(--page-width); margin: 0; padding: 0; }
+
+    .page { position: relative; box-sizing: border-box; background: var(--bg); overflow: hidden; }
+    .page-inner {
+      box-sizing: border-box;
+      height: calc(var(--page-height) - var(--page-pad-top) - var(--page-pad-bottom));
+      padding: var(--page-pad-top) var(--page-pad-right) var(--page-pad-bottom) var(--page-pad-left);
+      overflow: hidden;
+    }
+
+    .page-footer {
+      position: absolute;
+      left: var(--page-pad-left);
+      right: var(--page-pad-right);
+      bottom: 48px;
+      font-family: var(--font-sans);
+      font-size: 26px;
+      color: var(--muted);
+      text-align: right;
+      letter-spacing: 0.02em;
+    }
+
+    .doc-title {
+      font-family: var(--font-sans);
+      font-size: var(--title);
+      line-height: 1.12;
+      margin: 0 0 22px 0;
+      letter-spacing: -0.01em;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-sans);
+      margin: 22px 0 14px 0;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+    h2 { font-size: var(--h2); }
+    h3 { font-size: 38px; }
+
+    p { margin: 0 0 18px 0; }
+
+    ul, ol { margin: 0 0 18px 1.1em; padding: 0; }
+    li { margin: 8px 0; }
+
+    blockquote {
+      margin: 18px 0;
+      padding: 0 0 0 18px;
+      border-left: 6px solid #ddd;
+      color: #222;
+    }
+
+    code, pre { font-family: var(--mono); font-size: 28px; line-height: 1.45; }
+    pre { background: #f7f7f7; padding: 16px 18px; border-radius: 12px; overflow: hidden; }
+
+    table { border-collapse: collapse; margin: 16px 0 20px 0; width: 100%; }
+    th, td { border-bottom: 2px solid #eee; padding: 10px 10px; vertical-align: top; }
+    th { font-family: var(--font-sans); text-align: left; }
+
+    .footnotes { color: var(--muted); font-size: 28px; }
+    .footnotes ol { margin-left: 1.2em; }
+
+    header, #title-block-header { display: none !important; }
+  </style>
+</head>
+<body>
+  <div id="doc-title" style="display:none;">{{ title }}</div>
+  <div id="content">{{ content_html | safe }}</div>
+  <div id="pages"></div>
+</body>
+</html>

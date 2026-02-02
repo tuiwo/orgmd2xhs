@@ -1,0 +1,110 @@
+#+TITLE: Temp
+#+DATE: 2026-01-11
+#+AUTHOR: tuiwo
+#+bibliography: /Users/feihaoyang/Library/Mobile Documents/com~apple~CloudDocs/Zotero/Better Bibtex/MyLibrary.bib
+#+cite_export: csl "~/Library/Mobile Documents/com~apple~CloudDocs/Zotero/Better Bibtex/ieee-fullname.csl"
+#+FILETAGS: :File:
+ 
+
+
+
+#+BEGIN_EXPORT html
+<div style="margin: 1em auto;">
+  <button>KEYWORD1</button>
+   <button>KEYWORD2</button>
+</div>
+#+END_EXPORT
+
+
+
+#+BEGIN_QUOTE
+[[http://orgmode.org/][Org mode]] is for keeping /notes[fn:1], maintaining TODO lists, planning projects,
+and authoring documents with a fast and effective/ system[fn:2].
+#+END_QUOTE
+
+
+* 测试内容1              
+:PROPERTIES:
+:ID:       32529C9D-BFE9-49D7-9303-A7636992017B
+:END:
+普肖尔河已经展开在我们旅人的眼前；远处荡漾着寒意，那是在难受的殚精竭神的酷热之后更加容易令人感受到的。穿过疏落地耸立在草原上的黑杨树、白桦树和白杨树的明明暗暗的绿叶，闪烁着带着冷气的火焰般的闪光，美丽的河水辉煌地袒露出银色的胸膛，群树的绿色鬈发茂密地垂拂在上面。这条河像是一个任性的女孩子，在那销魂荡魄的一刻，当忠实的镜子嫉妒地映出她充满着骄傲和耀眼的光彩的前额，百合花一样的双肩，披覆着暗沉的亚麻色发浪的大理石一样的脖颈的时候，当她没完没了地耍脾气，除掉一些装饰，又换上另外一些装饰的时候；——她几乎每年都要改变环境，选取新的河道，在周围点缀着各式各样新的景色。一排排的水车用笨重的轮子掬起广阔的水浪，猛烈地抛掷开去，溅出水花，撒成轻雾。
+
+** 次级标题
+普肖尔河已经展开在我们旅人的眼前；远处荡漾着寒意，那是在难受的殚精竭神的酷热之后更加容易令人感受到的。穿过疏落地耸立在草原上的黑杨树、白桦树和白杨树的明明暗暗的绿叶，闪烁着带着冷气的火焰般的闪光，美丽的河水辉煌地袒露出银色的胸膛，群树的绿色鬈发茂密地垂拂在上面。这条河像是一个任性的女孩子，在那销魂荡魄的一刻，当忠实的镜子嫉妒地映出她充满着骄傲和耀眼的光彩的前额，百合花一样的双肩，披覆着暗沉的亚麻色发浪的大理石一样的脖颈的时候，当她没完没了地耍脾气，除掉一些装饰，又换上另外一些装饰的时候；——她几乎每年都要改变环境，选取新的河道，在周围点缀着各式各样新的景色。一排排的水车用笨重的轮子掬起广阔的水浪，猛烈地抛掷开去，溅出水花，撒成轻雾。
+
+*** 下级标题
+Here’s the thing, though: Matt gets a lot of stuff done. He gets it done well and is generally happy doing it. The things he writes about in this book will help you get stuff done, too. He is going to teach you how to make manageable changes so that you can achieve the things you would love to make happen, and he’ll show you how to do it without upending your life.[cite:@liuDataDrivenApproachUncertainty2021]
+
+
+There is no doubt Matt is a hard worker. If you want to be productive and accomplish your goals, it’s a given that you will have to work hard. However, you do not need to sacrifice your family time, your fun time, or your health to do it. Matt is going to show you how to maximize the time that you have and get the most out of it.
+
+#+NAME:   fig:1
+#+ATTR_HTML: :width 700px
+#+CAPTION: This is the caption for the next figure link (or table)
+[[file:static/img/post1/2025-09-21_21-45-19_screenshot.png]]
+
+
+
+
+
+* 公式
+$E = mc^2$ 是爱因斯坦著名的公式
+\begin{equation}
+\label{1}
+F(s) = \int_{0-}^{ \infty } f(t) e^{-st} dt
+\end{equation}
+
+* 代码块
+#+BEGIN_SRC python
+  print("Hello World")
+#+END_SRC
+
+* Tikz图片
+#+HEADER: :file ./static/tikz/post1/test1.svg :imagemagick yes
+#+HEADER: :results file raw :headers '("\\usepackage{tikz}\\usepackage{circuitikz}\\usepackage{amsmath}")
+#+HEADER: :fit yes :imoutoptions -geometry 400 :iminoptions -density 600
+#+BEGIN_src latex
+  % 开始电路环境
+\begin{tikzpicture}
+	% Paths, nodes and wires:
+	\node[nigfete] at (0.75, -0.02){};
+	\node[oscillator] at (-2.51, 0.01){};
+	\draw (-1.25, 0.75) to[european controlled voltage source] (-1.25, -1);
+	\draw (-3, 0.75) -- (0.75, 0.75);
+	\draw (-1.25, -1) -- (0.75, -1) -- (0.75, -0.74);
+	\draw (-3, 0.75) -- (-3, 0.5);
+	\draw (-3, -0.5) -- (-3, -1) -- (-1.25, -1);
+	\node[shape=rectangle, minimum width=0.715cm, minimum height=0.465cm] at (0.946, 0.107){} node[anchor=north west, align=left, text width=0.327cm, inner sep=6pt] at (0.571, 0.357){Q1};
+\end{tikzpicture}
+#+End_src
+
+#+NAME:   fig:2
+#+ATTR_HTML: :width 200px
+#+CAPTION: This is the caption for the circuit.
+#+RESULTS:
+[[file:./static/tikz/post1/test1.svg]]
+
+
+
+
+
+
+
+
+
+
+
+
+[fn:1] For note keeping, [[http://jblevins.org/projects/deft/][Deft]] with Org mode make a cute couple.
+Pick a few popular papers and grind through the ambiguity. For my first handful of papers in a new area, I go line-by-line and search up all the unfamiliar terms to build that missing context.
+Once you’re past the initial slog, you can start applying the rest of the post (sampling, skimming, streamlining your approach). But I do think the first few should be deliberately hard and long.
+[fn:2] A [[http://doc.norang.ca/org-mode.html][great article]] elaborates on this.
+
+
+
+
+* References
+:PROPERTIES:
+:CUSTOM_ID: references
+:END:
+#+print_bibliography:
