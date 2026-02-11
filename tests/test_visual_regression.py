@@ -2,9 +2,10 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from org2xhs.render import RenderConfig, render_org_to_images
 from PIL import Image
 from pixelmatch.contrib.PIL import pixelmatch
+
+from org2xhs.render import RenderConfig, render_org_to_images
 
 
 def _compare_images(
@@ -46,7 +47,7 @@ def test_visual_regression_clean_sample(tmp_path: Path):
 
     diff_dir = Path("test-results/visual-diff/clean")
     total_diff = 0
-    for b, a in zip(baseline_pngs, actual_pngs):
+    for b, a in zip(baseline_pngs, actual_pngs, strict=True):
         diff_path = diff_dir / b.name
         total_diff += _compare_images(b, a, diff_path, threshold=0.10)
 

@@ -1,9 +1,11 @@
 from __future__ import annotations
 
 from pathlib import Path
+
 from PIL import Image
 
 from org2xhs.render import RenderConfig, render_org_to_images
+
 
 def test_smoke_render(tmp_path: Path):
     org = Path("tests/fixtures/sample.org")
